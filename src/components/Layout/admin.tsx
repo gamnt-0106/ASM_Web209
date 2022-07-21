@@ -24,7 +24,6 @@ const App: React.FC = () => (
   <Layout>
     <HeaderCustom>
       <Logo src={LogoImage} />
-      {/* <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']} items={items1} /> */}
     </HeaderCustom>
     <Layout>
       <Sider

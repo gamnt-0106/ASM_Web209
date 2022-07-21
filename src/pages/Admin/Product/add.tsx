@@ -1,27 +1,49 @@
-import React from "react";
+import React from 'react'
 import styled from "styled-components";
 import { Typography, Col, Row, Button, Checkbox, Form, Input, InputNumber, Select, message } from 'antd'
-// import UploadImage from "../../../components/Product/UploadImage";
-import { createProduct } from "../../../api/product";
-import { useNavigate } from "react-router-dom";
-import UploadImage from "../../../components/Product/UploadImage";
+import { Link, useNavigate } from "react-router-dom";
+import { add } from '../../../api/product';
+import UploadImage from '../../../components/Product/UploadImage';
 
 const { TextArea } = Input
 const { Option } = Select;
 
-const AddProductPage: React.FC = () => {
+const AddProduct = () => {
+	const [image, setUploadedImage] = React.useState('')
 	const navigate = useNavigate()
+	const onHandleAdd = (image: any) => {
+		// console.log(image);
+		setUploadedImage(image.img)
+
+	}
 	const onFinish = async (values: any) => {
 		console.log('Success:', values);
+		console.log(image);
 
 		try {
-			const data = await createProduct(values)
-			message.success("Tạo mới thành công")
-			navigate(-1)
+
+
+			if (Number(values.saleOffPrice) > Number(values.originalPrice)) {
+				// values.saleOffPrice = "Mã giảm giá quá lớn"
+				message.error("Giá giảm không được > giá cũ")
+				
+
+
+			} else if (!image) {
+				message.error("Bạn chưa chọn ảnh")
+			} else{
+				const data = await add({ ...values, image })
+				// console.log(data);
+
+				message.success("Tạo mới thành công")
+			}
+
+			// navigate(-1)
 		} catch (err) {
 			message.error("Có lỗi xảy ra")
 		}
 	};
+	// console.log(uploadedImage);
 
 	const onFinishFailed = (errorInfo: any) => {
 		console.log('Failed:', errorInfo);
@@ -35,12 +57,11 @@ const AddProductPage: React.FC = () => {
 			</Breadcrumb>
 			<Row gutter={16}>
 				<Col span={10}>
-					<UploadImage />
+					<UploadImage onAdd={onHandleAdd} />
 				</Col>
 				<Col span={14}>
 					<Typography.Title level={5}>Thông tin sản phẩm</Typography.Title>
 					<Form
-						// name="product"
 						initialValues={{}}
 						onFinish={onFinish}
 						onFinishFailed={onFinishFailed}
@@ -62,7 +83,8 @@ const AddProductPage: React.FC = () => {
 									name="originalPrice"
 									label="Giá gốc"
 									labelCol={{ span: 24 }}
-									rules={[{ required: true, message: 'Gía sản phẩm' }]}
+
+									rules={[{ required: true, message: 'Không được để trống' }]}
 								>
 									<InputNumber style={{ width: '100%' }} size="large" />
 								</Form.Item>
@@ -72,9 +94,11 @@ const AddProductPage: React.FC = () => {
 									name="saleOffPrice"
 									label="Giá giảm"
 									labelCol={{ span: 24 }}
-									rules={[{ required: true, message: 'Gía sản phẩm' }]}
+
+									rules={[{ required: true, message: 'Không được để trống' }]}
 								>
 									<InputNumber style={{ width: '100%' }} size="large" />
+
 								</Form.Item>
 							</Col>
 							<Col span={12}>
@@ -84,7 +108,7 @@ const AddProductPage: React.FC = () => {
 									rules={[{ required: true }]}
 								>
 									<Select style={{ width: '100%' }} size="large">
-										<Option value="phone">Điện thoại</Option>
+									<Option value="phone">Điện thoại</Option>
 										<Option value="laptop">Laptop</Option>
 										<Option value="accessories" disabled>
 											Phụ kiện
@@ -113,7 +137,8 @@ const AddProductPage: React.FC = () => {
 						</Form.Item>
 
 						<Form.Item>
-							<Button type="primary" htmlType="submit">
+							<Button type="primary" htmlType="submit" >
+								<Link to={'admin/product'}/>
 								Tạo mới sản phẩm
 							</Button>
 						</Form.Item>
@@ -133,5 +158,4 @@ const Breadcrumb = styled.div`
 const Label = styled.div`
 	font-size: 13px;
 `
-
-export default AddProductPage
+export default AddProduct

@@ -2,12 +2,15 @@ import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import Header from './components/Header'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import UserLayout from './components/Layout/user'
 import AdminLayout from './components/Layout/admin'
 import HomePage from './Home/home'
 import AddProductPage from './pages/Admin/Product/add'
-import ProductAdminPage from './pages/Admin/Product/product'
+import ProductAdminPage from './pages/Admin/Product/List'
+import DetailPage from './Home/Detail'
+import EditProduct from './pages/Admin/Product/edit'
+import CategoriesPage from './pages/Admin/category'
 function App(props:any) {
   const [count, setCount] = useState(0)
 
@@ -17,14 +20,18 @@ function App(props:any) {
           { /* User layout*/}
           <Route path='/' element={<UserLayout/>}>
             <Route index element ={<HomePage/>}/>
+            <Route path='detail' element={<DetailPage/>}/>
 
           </Route>
                {/* Admin layout */}
         <Route path='admin' element={<AdminLayout/>}>
-          <Route index element={<ProductAdminPage/>}/>
-          <Route path='product/add' element={<AddProductPage/>}/>
-          {/* <Route path='product/edit' element={<EditProduct/>}/>
-          <Route path='categories' element={<CategoriesPage/>}/> */}
+          <Route index element ={<Navigate to ={"product"}/>}/>
+          <Route path='product'>
+              <Route index element={<ProductAdminPage />} />
+              <Route path='add' element={<AddProductPage />} />
+              <Route path='edit/:id' element={<EditProduct />} />
+              <Route path='categories' element={<CategoriesPage />} />
+            </Route>
         </Route>
         </Routes>
      
