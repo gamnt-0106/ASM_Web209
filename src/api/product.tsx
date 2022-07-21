@@ -22,6 +22,13 @@ export const listProduct:any = () => {
     return instance.get(url);
 }
 
+
+export const listProduc111t:any = () => {
+    const url = `/products`;
+    return instance.get(url);
+}
+
+
 export const add:any = (product:any) => {
     const url = `/products`;
     return instance.post(url, product);
