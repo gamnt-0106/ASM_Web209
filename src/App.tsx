@@ -7,7 +7,7 @@ import UserLayout from './components/Layout/user'
 import AdminLayout from './components/Layout/admin'
 import HomePage from './Home/home'
 import AddProductPage from './pages/Admin/Product/add'
-import ProductAdminPage from './pages/Admin/Product/List'
+import ListProduct from './pages/Admin/Product/List'
 import DetailPage from './Home/Detail'
 import EditProduct from './pages/Admin/Product/edit'
 import CategoriesPage from './pages/Admin/category'
@@ -26,13 +26,15 @@ function App(props:any) {
                {/* Admin layout */}
         <Route path='admin' element={<AdminLayout/>}>
           <Route index element ={<Navigate to ={"product"}/>}/>
+
           <Route path='product'>
-              <Route index element={<ProductAdminPage />} />
+              <Route index element={<ListProduct />} />
               <Route path='add' element={<AddProductPage />} />
               <Route path='edit/:id' element={<EditProduct />} />
-              <Route path='categories' element={<CategoriesPage />} />
+              {/* <Route path='categories' element={<CategoriesPage />} /> */}
             </Route>
         </Route>
+
         </Routes>
      
     </div>
