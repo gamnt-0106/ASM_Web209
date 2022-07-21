@@ -2,14 +2,6 @@
   "categories": [],
   "products": [
     {
-      "name": "Apple iPhone 13 Pro Max",
-      "originalPrice": 122222,
-      "saleOffPrice": 12312321312,
-      "feature": "Apple iPhone 13 Pro Max",
-      "description": "Apple iPhone 13 Pro Max",
-      "id": 1
-    },
-    {
       "name": "Điện thoại Samsung Galaxy A03 (3GB/32GB) - Hàng chính hãng",
       "originalPrice": 3000000,
       "saleOffPrice": 2900000,
@@ -26,6 +18,16 @@
       "feature": "Màn hình Super Retina XDR 6.1 inch2\nChế độ Điện Ảnh làm tăng thêm độ sâu trường ảnh nông và tự động thay đổi tiêu cự trong video",
       "description": "iPhone 13. Hệ thống camera kép tiên tiến nhất từng có trên iPhone. Chip A15 Bionic thần tốc. Bước nhảy vọt về thời lượng pin. Thiết kế bền bỉ. Mạng 5G siêu nhanh.1 Cùng với màn hình Super Retina XDR sáng hơn.",
       "id": 6
+    },
+    {
+      "name": "honggnng",
+      "originalPrice": 6666666,
+      "saleOffPrice": 44444,
+      "categories": "laptop",
+      "feature": "ggfgf",
+      "description": "fulll",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1658415075/anhhtus/yspiwrgfropikn3pfsch.jpg",
+      "id": 7
     }
   ]
 }

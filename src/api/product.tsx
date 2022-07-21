@@ -12,6 +12,10 @@
 // }
 import instance from "./instance";
 
+export const getProductId:any = (id:any) => {
+    const url = `/products/${id}`;
+    return instance.get(url);
+}
 
 export const listProduct:any = () => {
     const url = `/products`;
