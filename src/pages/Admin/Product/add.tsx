@@ -36,6 +36,7 @@ const AddProduct = () => {
 				// console.log(data);
 
 				message.success("Tạo mới thành công")
+				navigate("/admin")
 			}
 
 			// navigate(-1)
