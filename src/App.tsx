@@ -5,38 +5,72 @@ import Header from './components/Header'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import UserLayout from './components/Layout/user'
 import AdminLayout from './components/Layout/admin'
-import HomePage from './Home/home'
+import HomePage from './Home/list'
 import AddProductPage from './pages/Admin/Product/add'
 import ListProduct from './pages/Admin/Product/list'
 import DetailPage from './Home/Detail'
 import EditProduct from './pages/Admin/Product/edit'
 import CategoriesPage from './pages/Admin/category'
-function App(props:any) {
+import CartPage from './pages/Cart'
+import { CartProvider } from 'react-use-cart'
+import ListHome from './Home/list'
+import Home from './Home/Home'
+import Login from './pages/Login'
+import Register from './pages/Register'
+import AddCategory from './pages/Admin/category/add'
+import EditCategory from './pages/Admin/category/edit'
+import ListCategory from './pages/Admin/category/list'
+import { List } from 'antd'
+import ListLinhKien from './pages/Admin/linhkien/linhKien'
+import ListPhuKien from './pages/Admin/phukien/List'
+import DetailProduct from './pages/Detailproduct'
+import CategoryList from './pages/Admin/category/list'
+function App(props: any) {
+
   const [count, setCount] = useState(0)
 
+  const newLocal = "auto"
   return (
     <div className='App'>
-        <Routes>
-          { /* User layout*/}
-          <Route path='/' element={<UserLayout/>}>
-            <Route index element ={<HomePage/>}/>
-            <Route path='detail' element={<DetailPage/>}/>
+      <Routes>
+        { /* User layout*/}
+        <Route path='/' element={<CartProvider><UserLayout /></CartProvider>}>
+          <Route index element={<Home />} />
+          <Route path='detail/:id' element={<DetailProduct />} />
+          <Route path='/cart' element={<CartPage />} />
 
-          </Route>
-               {/* Admin layout */}
-        <Route path='admin' element={<AdminLayout/>}>
-          <Route index element ={<Navigate to ={"product"}/>}/>
+        </Route>
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
+        {/* Admin layout */}
+        <Route path='admin' element={<AdminLayout />}>
+          <Route index element={<Navigate to={"product"} />} />
 
           <Route path='product'>
-              <Route index element={<ListProduct />} />
-              <Route path='add' element={<AddProductPage />} />
-              <Route path='edit/:id' element={<EditProduct />} />
-              {/* <Route path='categories' element={<CategoriesPage />} /> */}
+            <Route index element={<ListProduct />} />
+            <Route path='add' element={<AddProductPage />} />
+            <Route path='edit/:id' element={<EditProduct />} />
+            <Route path='categories' element={<CategoriesPage />} />
+          </Route>
+          <Route path='categories'>
+            <Route index element={<Navigate to={"phone"} />} />
+            <Route path='add' element={<AddCategory />} />
+            <Route path='edit/:id' element={<EditCategory />} />
+            <Route path='phone'>
+              <Route index element={<CategoryList />} />
             </Route>
-        </Route>
+            <Route path='phukien'>
+              <Route index element={<ListPhuKien />} />
+            </Route>
 
-        </Routes>
-     
+            <Route path='linhkien'>
+              <Route index element={<ListLinhKien />} />
+            </Route>
+          </Route>
+
+        </Route>
+      </Routes>
+
     </div>
   )
 }

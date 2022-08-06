@@ -54,7 +54,7 @@ const columns: ColumnsType<DataType> = [
 
 
 
-const ListCategory = () => {
+const CategoryList = () => {
     const [dataTable, setDataTable] = useState([])
     // const [isLoading, setIsLoading] = useState(false)
     const queryClient = new QueryClient();
@@ -95,4 +95,4 @@ const Breadcrumb = styled.div`
     justify-content: space-between;
     margin-top: 20px;
 `
-export default ListCategory
+export default CategoryList

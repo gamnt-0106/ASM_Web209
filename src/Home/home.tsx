@@ -1,11 +1,22 @@
 import React from 'react'
-import Header from '../components/Header'
-const HomePage = () => {
+import Accessory from '../components/Accessory'
+import ComputerAccessory from '../components/ComputerAccessory'
+import ListProduct from '../Home/list'
+
+const Home = () => {
     return (
-        <>
-            <h1>User Page</h1>
-        </>
+        <div>
+            <section style={{ width: "90%", margin: "30px auto" }}>
+                <ListProduct />
+            </section>
+            <section style={{ width: "80%", margin: "30px auto" }}>
+                <Accessory />
+            </section>
+            <section style={{ width: "80%", margin: "30px auto" }}>
+                <ComputerAccessory />
+            </section>
+        </div>
     )
 }
 
-export default HomePage
+export default Home

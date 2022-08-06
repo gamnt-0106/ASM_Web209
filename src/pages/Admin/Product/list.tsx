@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { SearchOutlined, PlusOutlined } from '@ant-design/icons';
 import type { ColumnsType } from 'antd/es/table';
 
-import {listProduct , removeProduct } from  '../../../api/product';
+import { listProduct, removeProduct } from '../../../api/product';
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
 import { listCate } from '../../../api/category';
 
@@ -65,8 +65,13 @@ const ListProduct = () => {
             navigate("/admin")
         }, 1000)
     }
+
+    const handAn = (id:any) => {
+        
+    }
     
     const columns: ColumnsType<DataType> = [
+       
         {
             title: 'Tên sản phẩm',
             dataIndex: 'name',
@@ -85,7 +90,7 @@ const ListProduct = () => {
             title: 'Đặc điểm',
             dataIndex: 'feature',
             key: 'feature',
-            render: text => <a>{text}</a>,
+            render: text => <p>{text}</p>,
 
 
         },
@@ -93,11 +98,11 @@ const ListProduct = () => {
             title: 'Loại hàng',
             dataIndex: 'categories',
             key: 'categories',
-            filters: category.map((item: any) => { return { text: item.name, value: item.name } }),
+            filters: category.map((item: any) => { return { text: item.name, value: item.id } }),
             onFilter: (value, record: any) => {
                 console.log(record.categories);
                 console.log(value);
-
+ 
                 return record.categories == value
             }
         },
@@ -120,7 +125,7 @@ const ListProduct = () => {
                         </Link>
 
                     </Button>
-
+                   
                     <Popconfirm
                         placement="topRight"
                         title="Bạn Có Muốn Xóa?"

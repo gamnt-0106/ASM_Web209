@@ -1,27 +1,74 @@
 {
   "categories": [
     {
+      "name": "Điện thoại",
       "id": 1,
-      "name": "phone"
+      "key": "1"
     },
     {
-      "id": 1,
-      "name": "laptop"
+      "name": "Phụ kiện",
+      "id": 2,
+      "key": "2"
     },
     {
+      "name": "Linh kiện",
+      "id": 3,
+      "key": "3"
+    }
+  ],
+  "detailCate": [
+    {
+      "name": "Iphone",
       "id": 1,
-      "name": "tablet"
+      "key": "1",
+      "categories": 1
+    },
+    {
+      "name": "Samsung",
+      "id": 2,
+      "key": "2",
+      "categories": 1
+    },
+    {
+      "name": "Xiaomi",
+      "id": 3,
+      "key": "3",
+      "categories": 1
+    },
+    {
+      "name": "Phụ kiện Apple",
+      "id": 4,
+      "key": "4",
+      "categories": 2
+    },
+    {
+      "name": "Dán màn hình",
+      "id": 5,
+      "key": "5",
+      "categories": 2
+    },
+    {
+      "name": "Ốp lưng - Bao da",
+      "id": 6,
+      "key": "6",
+      "categories": 2
+    },
+    {
+      "name": "Chân sạc Type C",
+      "id": 7,
+      "key": "3",
+      "categories": 3
     }
   ],
   "products": [
     {
-      "name": "Điện thoại Samsung Galaxy A03 (3GB/32GB) - Hàng chính hãng",
+      "name": "Điện thoại RENO7 Z - Hàng chính hãng",
       "originalPrice": 3000000,
       "saleOffPrice": 2900000,
       "categories": "phone",
-      "feature": "Thời gian bảo hành\n12 Tháng",
-      "description": "Sở hữu camera 48MP chụp hình sắc nét và viên pin siêu trâu 5.000mAh sử dụng đến hai ngày, điện thoại Samsung Galaxy A03 sẽ mang tới cho bạn những trải nghiệm cực kì ấn tượng trong phân khúc giá rẻ.",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1658537757/anhhtus/vlhsvjdkmpx8uxe1iiif.jpg",
+      "feature": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000đ",
+      "description": "Sở hữu camera 48MP chụp hình sắc nét và viên pin siêu trâu 5.000mAh sử dụng đến hai ngày",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659792932/anhhtus/ynnkqgtqfahbjq2hbdkv.png",
       "id": 5
     },
     {
@@ -29,19 +76,19 @@
       "originalPrice": 1300000,
       "saleOffPrice": 120000,
       "categories": "phone",
-      "feature": "Màn hình Super Retina XDR 6.1 inch2\nChế độ Điện Ảnh làm tăng thêm độ sâu trường ảnh nông và tự động thay đổi tiêu cự trong video",
-      "description": "iPhone 13. Hệ thống camera kép tiên tiến nhất từng có trên iPhone. Chip A15 Bionic thần tốc. Bước nhảy vọt về thời lượng pin. Thiết kế bền bỉ. Mạng 5G siêu nhanh.1 Cùng với màn hình Super Retina XDR sáng hơn.",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1658538048/anhhtus/ki8gsdm6xc7zleggjegi.jpg",
+      "feature": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000đ và",
+      "description": "Super Retina XDR sáng hơn.",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659792970/anhhtus/xn3yojpzuxrqo9vl3j8a.png",
       "id": 6
     },
     {
-      "name": "Apple iPhone 13",
+      "name": "Apple iPhone 11",
       "originalPrice": 300000,
       "saleOffPrice": 22222,
       "categories": "phone",
-      "feature": "Màn hình Super Retina XDR 6.1 inch2\nChế độ Điện Ảnh làm tăng thêm độ sâu trường ảnh nông và tự động thay đổi tiêu cự trong video\nHệ thống camera kép tiên tiến với camera Wide và Ultra Wide 12MP; Phong Cách Nhiếp Ảnh, HDR thông minh thế hệ 4, chế độ Ban Đêm",
+      "feature": "Màn hình Super Retina XDR 6.1 inch2\nChế độ Điện Ảnh làm tăng thêm độ sâu trường ảnh nông và tự động thay đổi tiêu cự trong video\n",
       "description": "iPhone 13. Hệ thống camera kép tiên tiến nhất từng có trên iPhone. Chip A15 Bionic thần tốc. Bước nhảy vọt về thời lượng pin. Thiết kế bền bỉ. Mạng 5G siêu nhanh.1 Cùng với màn hình Super Retina XDR sáng hơ",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1658538818/anhhtus/galzuyjffzzpr5wvc03w.jpg",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659793004/anhhtus/r1hyg5loaxrcyhgdgjd7.png",
       "id": 7
     },
     {
@@ -49,20 +96,118 @@
       "originalPrice": 300000,
       "saleOffPrice": 22222,
       "categories": "phone",
-      "feature": "Màn hình Super Retina XDR 6.1 inch2\nChế độ Điện Ảnh làm tăng thêm độ sâu trường ảnh nông và tự động thay đổi tiêu cự trong video\nHệ thống camera kép tiên tiến với camera Wide và Ultra Wide 12MP; Phong Cách Nhiếp Ảnh, HDR thông minh thế hệ 4, chế độ Ban Đêm",
+      "feature": "Màn hình Super Retina XDR 6.1 inch2\nChế độ Điện Ảnh làm tăng thêm độ sâu trường ảnh nông và tự động thay đổi tiêu cự trong video\n",
       "description": "iPhone 13. Hệ thống camera kép tiên tiến nhất từng có trên iPhone. Chip A15 Bionic thần tốc. Bước nhảy vọt về thời lượng pin. Thiết kế bền bỉ. Mạng 5G siêu nhanh.1 Cùng với màn hình Super Retina XDR sáng hơ",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1658538765/anhhtus/qojp212bzvydkmcdbyid.jpg",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659793064/anhhtus/mbb9gkuuyb0uriqptuvz.png",
       "id": 8
     },
     {
-      "name": "honggnng8888888",
-      "originalPrice": 44444,
-      "saleOffPrice": 3333,
-      "categories": "tablet",
-      "feature": "ngonnn",
-      "description": "diien nuoc day du",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1658540534/anhhtus/aeer9c6mmp9frqv3xprv.jpg",
+      "name": "Điện thoại Samsung Galaxy S22 Plus 5G (8GB/128GB) - Hàng chính hãng",
+      "originalPrice": 22000000,
+      "saleOffPrice": 19000000,
+      "categories": "phone",
+      "feature": "Chính 50 MP & Phụ 12 MP, 10 MP",
+      "description": "\tDynamic AMOLED 2X 120Hz",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659575506/anhhtus/xases3oclikg1ykmtzlr.png",
       "id": 9
+    },
+    {
+      "name": "iPhone 11 64GB I Chính hãng VN/A",
+      "originalPrice": 18000000,
+      "saleOffPrice": 13790,
+      "categories": "phone",
+      "feature": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000",
+      "description": "Chế độ Điện Ảnh làm tăng thêm độ sâu trường ảnh nông và tự động thay đổi tiêu cự trong video",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659575334/anhhtus/v5brkpqnvbb0epxoqnrs.png",
+      "id": 10
+    },
+    {
+      "name": "Điện thoại Samsung Galaxy S22 Ultra 5G (8GB/128GB) - Hàng Chính Hãng",
+      "originalPrice": 3000000,
+      "saleOffPrice": 2699000,
+      "categories": "phone",
+      "feature": "Samsung Galaxy S22 Ultra (8GB - 128GB)",
+      "description": "Dịch vụ phòng chờ hạng thương gia tại sân bay và khác",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659575814/anhhtus/dwz5xlgzad8svfeodobg.png",
+      "id": 11
+    },
+    {
+      "name": "Điện thoại RENO7 Z - Hàng chính hãng",
+      "originalPrice": 3000000,
+      "saleOffPrice": 2900000,
+      "categories": "phone",
+      "feature": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000đ",
+      "description": "Sở hữu camera 48MP chụp hình sắc nét và viên pin siêu trâu 5.000mAh sử dụng đến hai ngày",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659792932/anhhtus/ynnkqgtqfahbjq2hbdkv.png",
+      "id": 5
+    },
+    {
+      "name": "Apple iPhone 13",
+      "originalPrice": 1300000,
+      "saleOffPrice": 120000,
+      "categories": "phone",
+      "feature": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000đ và",
+      "description": "Super Retina XDR sáng hơn.",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659792970/anhhtus/xn3yojpzuxrqo9vl3j8a.png",
+      "id": 6
+    },
+    {
+      "name": "Apple iPhone 11",
+      "originalPrice": 300000,
+      "saleOffPrice": 22222,
+      "categories": "phone",
+      "feature": "Màn hình Super Retina XDR 6.1 inch2\nChế độ Điện Ảnh làm tăng thêm độ sâu trường ảnh nông và tự động thay đổi tiêu cự trong video\n",
+      "description": "iPhone 13. Hệ thống camera kép tiên tiến nhất từng có trên iPhone. Chip A15 Bionic thần tốc. Bước nhảy vọt về thời lượng pin. Thiết kế bền bỉ. Mạng 5G siêu nhanh.1 Cùng với màn hình Super Retina XDR sáng hơ",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659793004/anhhtus/r1hyg5loaxrcyhgdgjd7.png",
+      "id": 7
+    },
+    {
+      "name": "Apple iPhone 13",
+      "originalPrice": 300000,
+      "saleOffPrice": 22222,
+      "categories": "phone",
+      "feature": "Màn hình Super Retina XDR 6.1 inch2\nChế độ Điện Ảnh làm tăng thêm độ sâu trường ảnh nông và tự động thay đổi tiêu cự trong video\n",
+      "description": "iPhone 13. Hệ thống camera kép tiên tiến nhất từng có trên iPhone. Chip A15 Bionic thần tốc. Bước nhảy vọt về thời lượng pin. Thiết kế bền bỉ. Mạng 5G siêu nhanh.1 Cùng với màn hình Super Retina XDR sáng hơ",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659793064/anhhtus/mbb9gkuuyb0uriqptuvz.png",
+      "id": 8
+    },
+    {
+      "name": "Điện thoại Samsung Galaxy S22 Plus 5G (8GB/128GB) - Hàng chính hãng",
+      "originalPrice": 22000000,
+      "saleOffPrice": 19000000,
+      "categories": "phone",
+      "feature": "Chính 50 MP & Phụ 12 MP, 10 MP",
+      "description": "\tDynamic AMOLED 2X 120Hz",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659575506/anhhtus/xases3oclikg1ykmtzlr.png",
+      "id": 9
+    },
+    {
+      "name": "iPhone 11 64GB I Chính hãng VN/A",
+      "originalPrice": 18000000,
+      "saleOffPrice": 13790,
+      "categories": "phone",
+      "feature": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000",
+      "description": "Chế độ Điện Ảnh làm tăng thêm độ sâu trường ảnh nông và tự động thay đổi tiêu cự trong video",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659575334/anhhtus/v5brkpqnvbb0epxoqnrs.png",
+      "id": 10
+    },
+    {
+      "name": "Điện thoại Samsung Galaxy S22 Ultra 5G (8GB/128GB) - Hàng Chính Hãng",
+      "originalPrice": 3000000,
+      "saleOffPrice": 2699000,
+      "categories": "phone",
+      "feature": "Samsung Galaxy S22 Ultra (8GB - 128GB)",
+      "description": "Dịch vụ phòng chờ hạng thương gia tại sân bay và khác",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659575814/anhhtus/dwz5xlgzad8svfeodobg.png",
+      "id": 11
+    }
+  ],
+  "users": [
+    {
+      "email": "gamnt0106@gmail.com",
+      "password": "$2a$10$1XUsQE/h35oGXtAd0fggtOIjYJRro3qbS2x14LuW8lJC612nmM5Zm",
+      "phone": "0988495321",
+      "id": 1
     }
   ]
 }

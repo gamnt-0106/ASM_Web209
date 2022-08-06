@@ -1,20 +1,43 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from "styled-components";
 import { Typography, Col, Row, Button, Checkbox, Form, Input, InputNumber, Select, message } from 'antd'
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { add } from '../../../api/product';
 import UploadImage from '../../../components/Product/UploadImage';
+import { listCate } from '../../../api/category';
+import { useDispatch, useSelector } from 'react-redux';
+import { getListCateDetailById } from '../../../features/Slide/categoryPhone/categoryPhone';
 
 const { TextArea } = Input
 const { Option } = Select;
 
 const AddProduct = () => {
 	const [image, setUploadedImage] = React.useState('')
+	const [category, setCategory] = useState([])
 	const navigate = useNavigate()
+	const dispatch = useDispatch();
+	const [listCateDetail, setListCateDetail] = useState([])
 	const onHandleAdd = (image: any) => {
 		// console.log(image);
 		setUploadedImage(image.img)
 
+	}
+
+	useEffect(() => {
+        const listcategory = async () => {
+            const { data } = await listCate();
+            // console.log(data);
+
+            setCategory(data)
+        }
+        listcategory();
+		
+    }, [])
+
+	const handlerChangeCate = async (e:any) => {
+		console.log(e);
+		const {payload} = await dispatch(getListCateDetailById(Number(e)))
+		setListCateDetail(payload)
 	}
 	const onFinish = async (values: any) => {
 		console.log('Success:', values);
@@ -35,7 +58,7 @@ const AddProduct = () => {
 				const data = await add({ ...values, image })
 				// console.log(data);
 
-				message.success("Tạo mới thành công")
+				message.success("Tạo mới thành công");
 				navigate("/admin")
 			}
 
@@ -59,10 +82,12 @@ const AddProduct = () => {
 			<Row gutter={16}>
 				<Col span={10}>
 					<UploadImage onAdd={onHandleAdd} />
+					{/* <UploadTest/> */}
 				</Col>
 				<Col span={14}>
 					<Typography.Title level={5}>Thông tin sản phẩm</Typography.Title>
 					<Form
+						// name="product"
 						initialValues={{}}
 						onFinish={onFinish}
 						onFinishFailed={onFinishFailed}
@@ -102,22 +127,35 @@ const AddProduct = () => {
 
 								</Form.Item>
 							</Col>
+
 							<Col span={12}>
 								<Form.Item
 									label="Phân loại"
 									name="categories"
 									rules={[{ required: true }]}
 								>
-									<Select style={{ width: '100%' }} size="large">
-									<Option value="phone">Điện thoại</Option>
-										<Option value="laptop">Laptop</Option>
-										<Option value="accessories" disabled>
-											Phụ kiện
-										</Option>
-										<Option value="tablet">Máy tính bảng</Option>
+									<Select style={{ width: '100%' }} size="large"  onChange={(e) => handlerChangeCate(e)}>
+										{category.map((item:any, index) => (
+											<Option value={item.id} key={index + 1}>{item.name}</Option>
+										))}
 									</Select>
 								</Form.Item>
 							</Col>
+							{listCateDetail != [] ?
+								<Col span={12}>
+								<Form.Item
+									label="Dòng sản phẩm"
+									name="detailCate"
+									rules={[{ required: true }]}
+								>
+									<Select style={{ width: '100%' }} size="large"  >
+										{listCateDetail.map((item:any, index) => (
+											<Option value={item.id} key={index + 1}>{item.name}</Option>
+										))}
+									</Select>
+								</Form.Item>
+							</Col>
+							: ""}
 						</Row>
 
 						<Form.Item
@@ -138,8 +176,7 @@ const AddProduct = () => {
 						</Form.Item>
 
 						<Form.Item>
-							<Button type="primary" htmlType="submit" >
-								<Link to={'admin/product'}/>
+							<Button type="primary" htmlType="submit">
 								Tạo mới sản phẩm
 							</Button>
 						</Form.Item>

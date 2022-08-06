@@ -1,29 +1,63 @@
-import { PhoneOutlined, LaptopOutlined, TabletFilled, AudioOutlined, SettingOutlined } from '@ant-design/icons';
+import React, { useState } from 'react'
+
+import { PhoneOutlined, LaptopOutlined, UnorderedListOutlined,AndroidFilled , ApiFilled, CustomerServiceFilled, MailOutlined, SettingOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Breadcrumb, Layout, Menu } from 'antd';
-import React from 'react';
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom';
 import styled from 'styled-components';
-
 import LogoImage from '../../assets/images/logo.png'
-
 const { Header, Content, Sider } = Layout;
 
-const item3: MenuProps['items'] = [
-  { key: "cellphone", icon: <PhoneOutlined />, label: <Link to="/admin">Điện thoại</Link> },
-  { key: "laptop", icon: <LaptopOutlined />, label: "Laptop" },
-  { key: "tablet", icon: <TabletFilled />, label: "Máy tính bảng" },
-  { key: "audio", icon: <AudioOutlined />, label: "Âm thanh" },
-  {
-    key: "categories", icon: <SettingOutlined />,
-    label: <Link to="/admin/categories">Categories</Link>
-  },
-]
+type MenuItem = Required<MenuProps>['items'][number];
 
-const App: React.FC = () => (
-  <Layout>
+function getItem(
+  label: React.ReactNode,
+  key: React.Key,
+  icon?: React.ReactNode,
+  children?: MenuItem[],
+  type?: 'group',
+): MenuItem {
+  return {
+    key,
+    icon,
+    children,
+    label,
+    type,
+  } as MenuItem;
+}
+
+const items: MenuItem[] = [
+  getItem('Sản phẩm', 'sub1', <AndroidFilled />, [
+    getItem(<Link to="/admin/product">Danh sách</Link>, '1', <UnorderedListOutlined />),
+
+
+  ]),
+  getItem('Loại hàng', 'sub2', <MailOutlined />, [
+    getItem( <Link to="/admin/categories/phone">Điện thoại</Link>, '5', <LaptopOutlined/>),
+    getItem(<Link to="/admin/categories/phuKien">Phụ kiện</Link>, '2', <CustomerServiceFilled />),
+    getItem(<Link to="/admin/categories/linhKien">Linh kiện</Link>, '3', <ApiFilled />),
+  ]),
+ 
+];
+const rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
+const AdminLayout = () => {
+
+  const [openKeys, setOpenKeys] = useState(['sub1']);
+
+  const onOpenChange: MenuProps['onOpenChange'] = keys => {
+    const latestOpenKey = keys.find(key => openKeys.indexOf(key) === -1);
+    if (rootSubmenuKeys.indexOf(latestOpenKey!) === -1) {
+      setOpenKeys(keys);
+    } else {
+      setOpenKeys(latestOpenKey ? [latestOpenKey] : []);
+    }
+  }
+  return (
+    <div>
+         <Layout>
     <HeaderCustom>
       <Logo src={LogoImage} />
+      {/* <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']} items={items1} /> */}
     </HeaderCustom>
     <Layout>
       <Sider
@@ -35,7 +69,7 @@ const App: React.FC = () => (
           defaultSelectedKeys={['1']}
           defaultOpenKeys={['sub1']}
           style={{ height: '100%', borderRight: 0 }}
-          items={item3}
+          items={items}
         />
       </Sider>
       <Layout style={{ padding: '0 24px 24px' }}>
@@ -45,7 +79,9 @@ const App: React.FC = () => (
       </Layout>
     </Layout>
   </Layout>
-);
+    </div>
+  )
+}
 
 const HeaderCustom = styled(Header)`
     background-color: #00B0D7;
@@ -63,4 +99,4 @@ const ContentCustom = styled(Content)`
   min-height: 100vh;
 `
 
-export default App;
+export default AdminLayout
