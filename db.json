@@ -54,7 +54,7 @@
       "categories": 2
     },
     {
-      "name": "Chân sạc Type C",
+      "name": "Phần mềm ",
       "id": 7,
       "key": "3",
       "categories": 3
@@ -62,152 +62,177 @@
   ],
   "products": [
     {
-      "name": "Điện thoại RENO7 Z - Hàng chính hãng",
-      "originalPrice": 3000000,
-      "saleOffPrice": 2900000,
-      "categories": "phone",
-      "feature": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000đ",
-      "description": "Sở hữu camera 48MP chụp hình sắc nét và viên pin siêu trâu 5.000mAh sử dụng đến hai ngày",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659792932/anhhtus/ynnkqgtqfahbjq2hbdkv.png",
-      "id": 5
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659931333/anhhtus/zlpkvjlay7atxtexdfa7.png",
+      "name": "Điện thoại SamSung - Hàng chính hãng 2222",
+      "originalPrice": 23333,
+      "saleOffPrice": 22222,
+      "categories": 1,
+      "detailCate": 2,
+      "feature": "Sở hữu camera 48MP chụp hình sắc nét và viên pin siêu trâu 5.000mAh sử dụng đến hai ngày",
+      "description": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000đ",
+      "id": 12
     },
     {
-      "name": "Apple iPhone 13",
-      "originalPrice": 1300000,
-      "saleOffPrice": 120000,
-      "categories": "phone",
+      "name": "iPhone 12 Pro Max 128GB I Chính hãng VN/A",
+      "originalPrice": 25000000,
+      "saleOffPrice": 23000000,
+      "categories": 1,
+      "detailCate": 1,
       "feature": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000đ và",
-      "description": "Super Retina XDR sáng hơn.",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659792970/anhhtus/xn3yojpzuxrqo9vl3j8a.png",
-      "id": 6
+      "description": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000đ và",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659931678/anhhtus/dvmzjls3ihkiiisnl8xh.png",
+      "id": 13
     },
     {
-      "name": "Apple iPhone 11",
-      "originalPrice": 300000,
-      "saleOffPrice": 22222,
-      "categories": "phone",
-      "feature": "Màn hình Super Retina XDR 6.1 inch2\nChế độ Điện Ảnh làm tăng thêm độ sâu trường ảnh nông và tự động thay đổi tiêu cự trong video\n",
-      "description": "iPhone 13. Hệ thống camera kép tiên tiến nhất từng có trên iPhone. Chip A15 Bionic thần tốc. Bước nhảy vọt về thời lượng pin. Thiết kế bền bỉ. Mạng 5G siêu nhanh.1 Cùng với màn hình Super Retina XDR sáng hơ",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659793004/anhhtus/r1hyg5loaxrcyhgdgjd7.png",
-      "id": 7
-    },
-    {
-      "name": "Apple iPhone 13",
-      "originalPrice": 300000,
-      "saleOffPrice": 22222,
-      "categories": "phone",
-      "feature": "Màn hình Super Retina XDR 6.1 inch2\nChế độ Điện Ảnh làm tăng thêm độ sâu trường ảnh nông và tự động thay đổi tiêu cự trong video\n",
-      "description": "iPhone 13. Hệ thống camera kép tiên tiến nhất từng có trên iPhone. Chip A15 Bionic thần tốc. Bước nhảy vọt về thời lượng pin. Thiết kế bền bỉ. Mạng 5G siêu nhanh.1 Cùng với màn hình Super Retina XDR sáng hơ",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659793064/anhhtus/mbb9gkuuyb0uriqptuvz.png",
-      "id": 8
-    },
-    {
-      "name": "Điện thoại Samsung Galaxy S22 Plus 5G (8GB/128GB) - Hàng chính hãng",
-      "originalPrice": 22000000,
-      "saleOffPrice": 19000000,
-      "categories": "phone",
-      "feature": "Chính 50 MP & Phụ 12 MP, 10 MP",
-      "description": "\tDynamic AMOLED 2X 120Hz",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659575506/anhhtus/xases3oclikg1ykmtzlr.png",
-      "id": 9
-    },
-    {
-      "name": "iPhone 11 64GB I Chính hãng VN/A",
-      "originalPrice": 18000000,
-      "saleOffPrice": 13790,
-      "categories": "phone",
-      "feature": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000",
-      "description": "Chế độ Điện Ảnh làm tăng thêm độ sâu trường ảnh nông và tự động thay đổi tiêu cự trong video",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659575334/anhhtus/v5brkpqnvbb0epxoqnrs.png",
-      "id": 10
-    },
-    {
-      "name": "Điện thoại Samsung Galaxy S22 Ultra 5G (8GB/128GB) - Hàng Chính Hãng",
-      "originalPrice": 3000000,
-      "saleOffPrice": 2699000,
-      "categories": "phone",
-      "feature": "Samsung Galaxy S22 Ultra (8GB - 128GB)",
-      "description": "Dịch vụ phòng chờ hạng thương gia tại sân bay và khác",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659575814/anhhtus/dwz5xlgzad8svfeodobg.png",
-      "id": 11
-    },
-    {
-      "name": "Điện thoại RENO7 Z - Hàng chính hãng",
-      "originalPrice": 3000000,
-      "saleOffPrice": 2900000,
-      "categories": "phone",
-      "feature": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000đ",
-      "description": "Sở hữu camera 48MP chụp hình sắc nét và viên pin siêu trâu 5.000mAh sử dụng đến hai ngày",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659792932/anhhtus/ynnkqgtqfahbjq2hbdkv.png",
-      "id": 5
-    },
-    {
-      "name": "Apple iPhone 13",
-      "originalPrice": 1300000,
-      "saleOffPrice": 120000,
-      "categories": "phone",
+      "name": "iPhone 12 Pro Max 128GB I Chính hãng VN/A",
+      "originalPrice": 27990,
+      "saleOffPrice": 25000,
+      "categories": 1,
+      "detailCate": 1,
       "feature": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000đ và",
-      "description": "Super Retina XDR sáng hơn.",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659792970/anhhtus/xn3yojpzuxrqo9vl3j8a.png",
-      "id": 6
+      "description": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000đ và",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1660005264/anhhtus/ao4blo8k9nlxssobxjsv.png",
+      "id": 14
     },
     {
-      "name": "Apple iPhone 11",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1660006789/anhhtus/wzwzlxigz4a7isnhybrh.png",
+      "name": "iPhone 11 128GB I Chính hãng VN/A",
+      "originalPrice": 3580000,
+      "saleOffPrice": 300000,
+      "categories": 1,
+      "detailCate": 3,
+      "feature": "Thu cũ đổi mới - Trợ giá đến 300.000đ",
+      "description": "Thu cũ đổi mới - Trợ giá đến 300.000đ",
+      "id": 15
+    },
+    {
+      "name": "iPhone 12 64GB I Chính hãng VN/A",
+      "originalPrice": 27000000,
+      "saleOffPrice": 25000000,
+      "categories": 1,
+      "detailCate": 1,
+      "feature": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000đ",
+      "description": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000đ",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1660005468/anhhtus/n81dt8ikhlsypoymkcn9.png",
+      "id": 16
+    },
+    {
+      "name": "Samsung Galaxy S22 Plus (8GB + 128GB)",
+      "originalPrice": 20190000,
+      "saleOffPrice": 19800000,
+      "categories": 1,
+      "detailCate": 2,
+      "feature": "Samsung Galaxy S22 Plus (8GB + 128GB)",
+      "description": "Samsung Galaxy S22 Plus (8GB + 128GB)",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1660005566/anhhtus/zkguossnq0kislc6jlm7.png",
+      "id": 17
+    },
+    {
+      "name": "iPhone 11 128GB I Chính hãng VN/A",
+      "originalPrice": 14000000,
+      "saleOffPrice": 13000000,
+      "categories": 1,
+      "detailCate": 1,
+      "feature": "iPhone 11 128GB I Chính hãng VN/A",
+      "description": "iPhone 11 128GB I Chính hãng VN/A",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1660005652/anhhtus/d0czvyyzvmaffs8gtmb0.png",
+      "id": 18
+    },
+    {
+      "name": "Samsung Galaxy A73 (5G) 256GB",
+      "originalPrice": 106990,
+      "saleOffPrice": 15000,
+      "categories": 1,
+      "detailCate": 2,
+      "feature": "Thu cũ đổi mới - Trợ giá đến 300.000đ",
+      "description": "Thu cũ đổi mới - Trợ giá đến 300.000đ",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1660005841/anhhtus/uwae08y3ajlvn08ufi7l.png",
+      "id": 19
+    },
+    {
+      "name": "ốp lưng iphone",
+      "originalPrice": 100000,
+      "saleOffPrice": 80000,
+      "categories": 2,
+      "detailCate": 6,
+      "feature": "chống sốc bảo vệ điện thoại",
+      "description": "chống sốc bảo vệ điện thoại",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1660005862/anhhtus/kqglukyzzzegrap1wkro.png",
+      "id": 20
+    },
+    {
+      "name": "USB",
       "originalPrice": 300000,
-      "saleOffPrice": 22222,
-      "categories": "phone",
-      "feature": "Màn hình Super Retina XDR 6.1 inch2\nChế độ Điện Ảnh làm tăng thêm độ sâu trường ảnh nông và tự động thay đổi tiêu cự trong video\n",
-      "description": "iPhone 13. Hệ thống camera kép tiên tiến nhất từng có trên iPhone. Chip A15 Bionic thần tốc. Bước nhảy vọt về thời lượng pin. Thiết kế bền bỉ. Mạng 5G siêu nhanh.1 Cùng với màn hình Super Retina XDR sáng hơ",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659793004/anhhtus/r1hyg5loaxrcyhgdgjd7.png",
-      "id": 7
+      "saleOffPrice": 250000,
+      "categories": 2,
+      "detailCate": 4,
+      "feature": "USB OTG 3.1 512GB Type C Sandisk SDDDC3 đen",
+      "description": "USB OTG 3.1 512GB Type C Sandisk SDDDC3 ",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1660005960/anhhtus/pdaqzyuygcjooc3acdjx.png",
+      "id": 21
     },
     {
-      "name": "Apple iPhone 13",
+      "name": "Sạc type C",
+      "originalPrice": 200000,
+      "saleOffPrice": 150000,
+      "categories": 2,
+      "detailCate": 4,
+      "feature": "Chân sạc Type C chính hãng , giá rẻ",
+      "description": "Chân sạc Type C chính hãng , giá rẻ,bảo hành 2 tháng",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1660006070/anhhtus/n0wqdxibvtwttnq9t4b2.png",
+      "id": 22
+    },
+    {
+      "name": "Wifi chính hãng , bảo hành 3 tháng",
+      "originalPrice": 5000000,
+      "saleOffPrice": 4000000,
+      "categories": 3,
+      "detailCate": 7,
+      "feature": "wifi giá rẻ chính hãng , bảo hành 3 tháng ",
+      "description": "wifi giá rẻ chính hãng , bảo hành 3 tháng ",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1660006369/anhhtus/wjtzcwjozbto9pbciq3d.png",
+      "id": 23
+    },
+    {
+      "name": "Gimbal",
       "originalPrice": 300000,
-      "saleOffPrice": 22222,
-      "categories": "phone",
-      "feature": "Màn hình Super Retina XDR 6.1 inch2\nChế độ Điện Ảnh làm tăng thêm độ sâu trường ảnh nông và tự động thay đổi tiêu cự trong video\n",
-      "description": "iPhone 13. Hệ thống camera kép tiên tiến nhất từng có trên iPhone. Chip A15 Bionic thần tốc. Bước nhảy vọt về thời lượng pin. Thiết kế bền bỉ. Mạng 5G siêu nhanh.1 Cùng với màn hình Super Retina XDR sáng hơ",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659793064/anhhtus/mbb9gkuuyb0uriqptuvz.png",
-      "id": 8
-    },
-    {
-      "name": "Điện thoại Samsung Galaxy S22 Plus 5G (8GB/128GB) - Hàng chính hãng",
-      "originalPrice": 22000000,
-      "saleOffPrice": 19000000,
-      "categories": "phone",
-      "feature": "Chính 50 MP & Phụ 12 MP, 10 MP",
-      "description": "\tDynamic AMOLED 2X 120Hz",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659575506/anhhtus/xases3oclikg1ykmtzlr.png",
-      "id": 9
-    },
-    {
-      "name": "iPhone 11 64GB I Chính hãng VN/A",
-      "originalPrice": 18000000,
-      "saleOffPrice": 13790,
-      "categories": "phone",
-      "feature": "[HOT] Thu cũ lên đời giá cao - Thủ tục nhanh - Trợ giá lên tới 1.000.000",
-      "description": "Chế độ Điện Ảnh làm tăng thêm độ sâu trường ảnh nông và tự động thay đổi tiêu cự trong video",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659575334/anhhtus/v5brkpqnvbb0epxoqnrs.png",
-      "id": 10
-    },
-    {
-      "name": "Điện thoại Samsung Galaxy S22 Ultra 5G (8GB/128GB) - Hàng Chính Hãng",
-      "originalPrice": 3000000,
-      "saleOffPrice": 2699000,
-      "categories": "phone",
-      "feature": "Samsung Galaxy S22 Ultra (8GB - 128GB)",
-      "description": "Dịch vụ phòng chờ hạng thương gia tại sân bay và khác",
-      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1659575814/anhhtus/dwz5xlgzad8svfeodobg.png",
-      "id": 11
+      "saleOffPrice": 20000,
+      "categories": 2,
+      "detailCate": 4,
+      "feature": "chống rung quay sắc nét , bảo hành 2 tháng",
+      "description": "chống rung quay sắc nét , bảo hành 2 tháng",
+      "image": "http://res.cloudinary.com/dv3vzmogk/image/upload/v1660006622/anhhtus/ixjdv5elm8fa0tnflu5p.png",
+      "id": 24
     }
   ],
   "users": [
     {
       "email": "gamnt0106@gmail.com",
-      "password": "$2a$10$1XUsQE/h35oGXtAd0fggtOIjYJRro3qbS2x14LuW8lJC612nmM5Zm",
-      "phone": "0988495321",
+      "password": "$2a$10$U0wb4ZOoAmWyAp5W4OREGeO5cBKBJoiq55uS7coGuBEqm8vGMJFS2",
+      "phone": "0914273526",
+      "role": "0",
       "id": 1
+    },
+    {
+      "email": "gamgam@gmail.com",
+      "password": "$2a$10$VBT/Sq34.dHZFyJ3dM/NYufct3iHePsww3./I4Y9G9luw6Hxcfq92",
+      "phone": "0941047102",
+      "role": "1",
+      "id": 2
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$H3nJdZ.qK4cEXN9cesHmTOJDST4FO/72hfcCIHa3H9w4EKXCAsLCW",
+      "phone": "0985905383",
+      "role": "0",
+      "id": 3
+    },
+    {
+      "email": "gamgam123@gmail.com",
+      "password": "$2a$10$P4YE/jo6vNLtQBVP8VLcDOdaIgF.x9BAsziUnecxZQ2D8OxFZk74G",
+      "phone": "0914273526",
+      "role": "0",
+      "id": 4
     }
   ]
 }

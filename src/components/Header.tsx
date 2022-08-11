@@ -1,101 +1,67 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
+import { Input } from 'antd';
+import { MailOutlined, AppstoreOutlined, SearchOutlined } from '@ant-design/icons';
 import logo from '../assets/images/logo.png'
-import banner from '../assets/images/banner.png'
-import { DashboardOutlined, DesktopOutlined, HomeOutlined, InsertRowLeftOutlined, LaptopOutlined, LoadingOutlined, MobileOutlined, PhoneOutlined, SearchOutlined, TabletOutlined, UsbOutlined, VideoCameraOutlined } from '@ant-design/icons';
-import { Input, Layout, Menu, MenuProps } from 'antd';
-import { Col, Row } from 'antd';
-import { EnvironmentOutlined } from '@ant-design/icons';
-import { RocketOutlined } from '@ant-design/icons';
-import { ShoppingCartOutlined } from '@ant-design/icons';
-const { Sider, Content } = Layout;
-type MenuItem = Required<MenuProps>['items'][number];
-function getItem(
-    label: React.ReactNode,
-    key?: React.Key | null,
-    icon?: React.ReactNode,
-    children?: MenuItem[],
-    type?: 'group',
-): MenuItem {
-    return {
-        key,
-        icon,
-        children,
-        label,
-        type,
-    } as MenuItem;
-}
-
-const items = [
-    getItem("Điện thoại", "sub1", <MobileOutlined />, []),
-    getItem("Laptop", "sub2", <LaptopOutlined />, []),
-    getItem("Máy tính bảng", "sub3", <TabletOutlined />, []),
-    getItem("Âm thanh", "sub4", <PhoneOutlined />, []),
-    getItem("Đồng hồ", "sub5", <DashboardOutlined />, []),
-    getItem("Nhà thông minh", "sub6", <HomeOutlined />, []),
-    getItem("Phụ kiện", "sub7", <UsbOutlined />, []),
-    getItem("PC - Màn hình", "sub8", <DesktopOutlined />, []),
-    getItem("Tivi", "sub9", <VideoCameraOutlined />, []),
-    getItem("Hàng cũ", "sub11", <InsertRowLeftOutlined />, []),
-    getItem("Tin công nghệ", "sub13", <LoadingOutlined />, []),
-];
-
-const onClick: MenuProps['onClick'] = e => {
-    console.log('click', e);
-};
+import Search from 'antd/lib/transfer/search';
+import { Col, Row } from 'antd'
+import { UserOutlined } from '@ant-design/icons';
+import MenuHeader from './Menu';
+import { useCart } from 'react-use-cart';
+import { Link } from 'react-router-dom';
+import PostFilterFormSearch from './SearchBar';
+import SearchBar from './SearchBar';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAllProduct } from '../features/Slide/product/product';
 const Header = () => {
+   
     return (
-        <>
-            <Row style={{backgroundColor:"red"}}>
-                <Col span={8}> 
-                <div className='' style={{margin:"10px" ,marginRight:"auto"}}>
 
-                <Logo width={"20px"} src={logo} />
+        <HeaderCo style={{padding:"10px 0"}} >
+            <Menu>
+                <div >
+                    <Link to={'/'}><Logo src={logo} alt="" /></Link>
                 </div>
-                
-                 </Col>
-                <Col span={8} style={{margin:"auto"}}>
-                <Input style={{borderRadius:"10px"}}placeholder="Search" prefix={<SearchOutlined /> } />
-                </Col>
-                <Col span={8}>
-                    <Row style={{margin:"10px"}}>
-                        <Col span={6} style={{color:"white"}}>Gọi mua hàng <br />1800.2097</Col>
-                        <Col span={6} style={{color:"white"}}><EnvironmentOutlined />Cửa hàng <br /> gần bạn</Col> 
-                        <Col span={6} style={{color:"white"}}><RocketOutlined />Tra cứu <br /> đơn hàng</Col>
-                        <Col span={6} style={{color:"white"}}><ShoppingCartOutlined />Giỏ hàng</Col>
-                    </Row>
-                </Col>
-            </Row>
-            <Layout>
-                <Layout style={{backgroundColor:"white"}}>
-                    <Sider style={{
-                        marginTop: "30px", marginLeft: "150px"
-                    }}>
-                        <Menu
-                            onClick={onClick}
-                            style={{
-                                width: "250"
-                            }}
-                            items={items}
-                        />
-                    </Sider>
-                    <Content style={{ marginTop: "30px" }}>
-                        <Banner src={banner} />
-                    </Content>
-                </Layout>
-            </Layout>
-        </>
+
+                <div style={{ margin: "auto 0" }}>
+                    <div>
+                        {/* <Input size="large" placeholder=" Search here..." style={{ borderRadius: "10px" }} prefix={<SearchOutlined/>} /> */}
+                        {/* <Search placeholder="input search text" /> */}
+                        <SearchBar  ></SearchBar>
+                    </div>
+                </div>
+
+               <MenuHeader/>
+
+            </Menu>
+        </HeaderCo>
 
 
-    );
+    )
 }
+
 const Logo = styled.img`
-width:65px ;
-height: auto;
+    widtd: 65px;
+    height:57px;
+    max-width:100%
 `
-const Banner = styled.img`
-width:900px
+
+const HeaderCo = styled.div`
+    margin: auto;
+    
+    background-color: red;
+    padding: 5px 10px
+`
+const Menu = styled.div`
+    width:80%;
+    display:grid ;
+    grid-template-columns: 2fr 4fr 5fr;
+    margin:auto;
+    gap:30px;
 `
 
 
-export default Header;
+
+
+
+export default Header

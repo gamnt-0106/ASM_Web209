@@ -25,7 +25,7 @@ type FormInputs = {
   });
   const validation = { resolver: yupResolver(fromSchema) };
   
-const Signin = () => {
+const Login = () => {
 
     const {register, handleSubmit,formState} = useForm<FormInputs>(validation);
     const {errors} = formState;
@@ -142,4 +142,4 @@ const Error = styled.div`
     margin-bottom: 10px;
 `
 
-export default Signin
+export default Login

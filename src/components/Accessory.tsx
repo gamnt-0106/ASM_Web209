@@ -3,39 +3,58 @@ import React from 'react'
 import styled from 'styled-components';
 import imageProduct from '../assets/images/pk3.png';
 import pk1 from '../assets/images/pk1.png';
+import pk4 from '../assets/images/pk4.png';
+import pk5 from '../assets/images/pk5.png';
+import pk6 from '../assets/images/pk6.png';
+import pk7 from '../assets/images/pk7.png';
+import pk8 from '../assets/images/pk8.png';
+import pk9 from '../assets/images/pk9.png';
+import pk10 from '../assets/images/pk10.png';
+import pk11 from '../assets/images/pk11.png';
 type Props = {}
 
 const Accessory = (props: Props) => {
       const data = [
         {
             title: 'Title 1',
+            image :pk1
         },
         {
             title: 'Title 2',
+            image:imageProduct
+            
         },
         {
             title: 'Title 3',
+            image:pk4
         },
         {
             title: 'Title 4',
+            image:pk5
         },
         {
             title: 'Title 4',
+            image:pk6
         },
         {
             title: 'Title 4',
+            image:pk7
         },
         {
             title: 'Title 4',
+            image:pk8
         },
         {
             title: 'Title 4',
+            image:pk9
         },
         {
             title: 'Title 4',
+            image:pk10
         },
         {
             title: 'Title 4',
+            image:pk11
         },
         {
             title: 'Title 4',
@@ -65,9 +84,9 @@ const Accessory = (props: Props) => {
                 
                 <div>
                     <div style={{textAlign:"center"}}>
-                        <PhuKien href="" ><img  src={imageProduct} alt="" width={100} style={{width:"100%"}} /> </PhuKien>
-                        <PhuKien href="" ><img  src={pk1} alt="" width={100} style={{width:"100%"}} /> </PhuKien>
-                        <NamePhuKien className='title'>Nổi bật</NamePhuKien>
+                        <PhuKien href="" ><img  src={item.image} alt="" width={100} style={{width:"100%"}} /> </PhuKien>
+                        {/* <NamePhuKien className='title'>Nổi bật</NamePhuKien> */}
+                       
                     </div>
                 </div>
             </List.Item>

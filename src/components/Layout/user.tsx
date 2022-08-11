@@ -1,17 +1,17 @@
-import React from "react";
-import Header from "../Header";
-import {Outlet} from 'react-router-dom'
-import Footer from "../Footer/footer";
+import React from 'react'
+import { Outlet } from 'react-router-dom'
+import Footer from '../Footer'
+import Header from '../Header'
 
-
-const UserLayout = (props: any) => {
+const WebsiteLayout = () => {
+    
     return (
-        <>
-            <Header/>
+        <div style={{position:"relative"}}>
+            <Header />
             <Outlet/>
-            <Footer/>
-        </>
+             <Footer/>
+        </div>
     )
 }
 
-export default UserLayout
+export default WebsiteLayout

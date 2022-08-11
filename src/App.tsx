@@ -10,7 +10,6 @@ import AddProductPage from './pages/Admin/Product/add'
 import ListProduct from './pages/Admin/Product/list'
 import DetailPage from './Home/Detail'
 import EditProduct from './pages/Admin/Product/edit'
-import CategoriesPage from './pages/Admin/category'
 import CartPage from './pages/Cart'
 import { CartProvider } from 'react-use-cart'
 import ListHome from './Home/list'
@@ -25,6 +24,7 @@ import ListLinhKien from './pages/Admin/linhkien/linhKien'
 import ListPhuKien from './pages/Admin/phukien/List'
 import DetailProduct from './pages/Detailproduct'
 import CategoryList from './pages/Admin/category/list'
+import PrivateRoute from './midlerware/PrivateRouter'
 function App(props: any) {
 
   const [count, setCount] = useState(0)
@@ -43,14 +43,13 @@ function App(props: any) {
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         {/* Admin layout */}
-        <Route path='admin' element={<AdminLayout />}>
+        <Route path='/admin'element={<PrivateRoute><AdminLayout /></PrivateRoute>}>
           <Route index element={<Navigate to={"product"} />} />
 
           <Route path='product'>
             <Route index element={<ListProduct />} />
             <Route path='add' element={<AddProductPage />} />
             <Route path='edit/:id' element={<EditProduct />} />
-            <Route path='categories' element={<CategoriesPage />} />
           </Route>
           <Route path='categories'>
             <Route index element={<Navigate to={"phone"} />} />

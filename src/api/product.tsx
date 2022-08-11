@@ -1,24 +1,13 @@
-// import instance from "./instance";
-
-
-// export const getAll = () => {
-//     const url = "/products"
-//     return instance.get(url)
-// }
-
-// export const createProduct = (data:any) => {
-//     const url = "/products"
-//     return instance.post(url, data)
-// }
 import instance from "./instance";
 
-export const getProductId:any = (id:any) => {
-    const url = `/products/${id}`;
-    return instance.get(url);
-}
 
 export const listProduct:any = () => {
     const url = `/products`;
+    return instance.get(url);
+}
+
+export const getProductId:any = (id:any) => {
+    const url = `/products/${id}`;
     return instance.get(url);
 }
 
@@ -36,7 +25,13 @@ export const removeProduct:any = (id:any) => {
     const url = `/products/${id}`;
     return instance.delete(url);
 }   
+
 export const getProductIdCate:any = (id:number) => {
     const url = `/products?categories=${id}`;
+    return instance.get(url);
+}
+
+export const listProductIdCateDetail:any = (id:number) => {
+    const url = `/products?detailCate=${id}`;
     return instance.get(url);
 }
