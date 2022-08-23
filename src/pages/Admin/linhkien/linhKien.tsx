@@ -10,7 +10,7 @@ import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-quer
 import { listCate, removeCate } from '../../../api/category';
 import type { TableColumnsType } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
-import { getListCatePhone, getListCatePhuKien } from '../../../features/Slide/categoryPhone/categoryPhone';
+import { getListCatePhone, getListCatePhuKien } from '../../..//features/Slide/categoryPhone/categoryPhone';
 import { getListProductById } from '../../../features/Slide/product/product';
 // import { useQuery } from 'react-query'
 const { Paragraph } = Typography
@@ -159,6 +159,7 @@ const ListLinhKien = () => {
                 title: 'Mô tả',
                 dataIndex: 'description',
                 key: 'description',
+                render: text => <div><div dangerouslySetInnerHTML={{__html:`${text}`}}></div></div>
             },
             {
                 title: "Hành Động", key: "action", render: (text, record: any) => (

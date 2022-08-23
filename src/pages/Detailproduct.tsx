@@ -89,7 +89,7 @@ const DetailProduct = () => {
                         <div style={{ position: "relative" }}>
                             <div>
                                 <p ><span style={{ color: "red", fontSize: "24px", fontWeight: "600" }}>{currency(Number(productId?.saleOffPrice))} đ </span><span style={{ color: "gray", paddingLeft: "10px" }}>{currency(Number(productId?.originalPrice))} đ</span></p>
-                                <p> Mô tả ngắn: {productId?.description}</p>
+                                <p> Mô tả ngắn: {productId?.feature}</p>
                             </div>
 
                             <div style={{ position: "absolute", bottom: "0", display: "flex", gap: 20 }}>
@@ -142,7 +142,7 @@ const DetailProduct = () => {
                     <h3 style={{ color: "red", textAlign:"center" }}>ĐẶC ĐIỂM  NỔI BẬT</h3>
                     <p>{productId.feature }</p>
                 </DacDiemNoiBat>
-                <p>{productId.description}</p>
+                <div dangerouslySetInnerHTML={{__html:`${productId.description}`}}></div>
             </section>
         </div>
     )
@@ -181,6 +181,7 @@ const Btn = styled.button`
         /* background-color: orange; */
         cursor: pointer;
         transition:all .1s linear;
+
     }
 `
 const Cart = styled.button`
@@ -197,6 +198,7 @@ const Cart = styled.button`
         color:#fff;
         cursor: pointer;
         transition:all .1s linear;
+
     }
 `
 const Col = styled.div`

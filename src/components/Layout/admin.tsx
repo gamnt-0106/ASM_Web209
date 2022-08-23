@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-import { PhoneOutlined, LaptopOutlined, UnorderedListOutlined,AndroidFilled , ApiFilled, CustomerServiceFilled, MailOutlined, SettingOutlined } from '@ant-design/icons';
-import type { MenuProps } from 'antd';
+import { MailOutlined, LaptopOutlined, AndroidFilled, UnorderedListOutlined, CustomerServiceFilled, ApiFilled,SearchOutlined} from '@ant-design/icons';
+import { Input, MenuProps } from 'antd';
 import { Breadcrumb, Layout, Menu } from 'antd';
 import { Link, Outlet } from 'react-router-dom';
 import styled from 'styled-components';
@@ -37,6 +37,9 @@ const items: MenuItem[] = [
     getItem(<Link to="/admin/categories/phuKien">Phụ kiện</Link>, '2', <CustomerServiceFilled />),
     getItem(<Link to="/admin/categories/linhKien">Linh kiện</Link>, '3', <ApiFilled />),
   ]),
+  getItem('Đơn hàng', 'sub3', <AndroidFilled />, [
+    getItem(<Link to="/admin/order">Danh sách</Link>, '6', <UnorderedListOutlined />),
+  ]),
  
 ];
 const rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
@@ -56,8 +59,18 @@ const AdminLayout = () => {
     <div>
          <Layout>
     <HeaderCustom>
+      
       <Logo src={LogoImage} />
-      {/* <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']} items={items1} /> */}
+      <p style={{float:"right",margin:"auto", color:"white"}}>Dashboard</p>
+      <div style={{ margin: "auto 0" }}>
+                    <div>
+                        <Input size="large" placeholder=" Search here..." style={{ borderRadius: "10px" }} prefix={<SearchOutlined/>} />
+                        {/* <Search placeholder="input search text" /> */}
+                    </div>
+                </div>
+                <div style={{margin:"auto 0"}}>
+                    <p style={{float:"right", color:"white"}}> Wellcom</p>
+                </div>
     </HeaderCustom>
     <Layout>
       <Sider

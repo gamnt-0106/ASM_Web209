@@ -5,7 +5,7 @@ import categoryPhoneSlice from '../features/Slide/categoryPhone/categoryPhone'
 import productSlice from '../features/Slide/product/product'
 import userSlide from '../features/Slide/user/userSlide'
 import searchSlide from '../features/Slide/searchSlice'
-
+import order from '../features/Slide/orderSlide'
 export const store = configureStore({
     reducer: {
         cart: cartSlice.reducer,
@@ -13,7 +13,8 @@ export const store = configureStore({
         categoryPhone: categoryPhoneSlice.reducer,
         category: categorySlice.reducer,
         product: productSlice.reducer,
-        searchProduct: searchSlide.reducer
+        searchProduct: searchSlide.reducer,
+        order: order.reducer
 
     }
 })

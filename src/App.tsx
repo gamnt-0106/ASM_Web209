@@ -25,6 +25,8 @@ import ListPhuKien from './pages/Admin/phukien/List'
 import DetailProduct from './pages/Detailproduct'
 import CategoryList from './pages/Admin/category/list'
 import PrivateRoute from './midlerware/PrivateRouter'
+import DetailOrder from './pages/Admin/order/detail'
+import ListOrder from './pages/Admin/order/list'
 function App(props: any) {
 
   const [count, setCount] = useState(0)
@@ -43,7 +45,7 @@ function App(props: any) {
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         {/* Admin layout */}
-        <Route path='/admin'element={<PrivateRoute><AdminLayout /></PrivateRoute>}>
+        <Route path='/admin' element={<PrivateRoute><AdminLayout/></PrivateRoute>}>
           <Route index element={<Navigate to={"product"} />} />
 
           <Route path='product'>
@@ -66,7 +68,11 @@ function App(props: any) {
               <Route index element={<ListLinhKien />} />
             </Route>
           </Route>
-
+          <Route path='order'>
+              <Route index element={<ListOrder />} />
+              <Route path='' element={<AddProductPage />} />
+              <Route path='detail/:id' element={<DetailOrder />} />
+            </Route>
         </Route>
       </Routes>
 
